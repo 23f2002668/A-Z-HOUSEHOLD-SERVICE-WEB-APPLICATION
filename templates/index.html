@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Home Page</title>
+    <meta name = "viewport" content = "width = device-width, initial-scale = 1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcidslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+
+    <style>
+
+      .dropbtn {
+        background-color: #04AA6D;
+        color: white;
+        padding: 16px;
+        font-size: 16px;
+        border: none;
+      }
+
+      .dropdown {
+        position: relative;
+        display: inline-block;
+      }
+
+      .options {
+        display: none;
+        position: absolute;
+        background-color: #f1f1f1;
+        min-width: 160px;
+        box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+        z-index: 1;
+      }
+
+      .options a {
+        color: black;
+        padding: 12px 16px;
+        text-decoration: none;
+        display: block;
+      }
+
+      .options a:hover {background-color: #ddd;}
+
+      .dropdown:hover .dropdown-content {display: block;}
+
+      .dropdown:hover .dropbtn {background-color: #3e8e41;}
+
+      tr:nth-child(odd){
+        background-image : url('/static/Image/back3.jpg');
+      }
+
+      tr:nth-child(even){
+        background-color : #C0C0C0;
+      }
+
+    </style>
+</head>
+<body>
+
+<div class = "background" style = "width : 100%; background-image : url('static/Image/back1.jpeg');">
+    <div class = "header" style = "z-index : 1000; position : fixed; border : 2px solid black; background-image : url('static/Image/back1.jpeg'); width : 100%; height : 13vh;">
+        <b style = "float : left; padding : 1.6% 1.5%; font-size : 2em; color : white; font-family : chalkboard;">A-Z HouseHold Services</b>
+        <b style = "float : right; padding : 2.2% 1.5%; font-size : 1.5em; color : white; font-family : chalkboard;"><a href = "login" style = "text-decoration : None; color : white;"> Sign In </a></b>
+        <b style = "float : right; padding : 2.2% 1.5%; font-size : 1.5em; color : white; font-family : chalkboard;"><a href = "#ContactUs"  style = "text-decoration : None; color : white;"> Contact Me </a></b>
+        <b style = "float : right; padding : 2.2% 1.5%; font-size : 1.5em; color : white; font-family : chalkboard;"><a href = "#AvailableServices"  style = "text-decoration : None; color : white;"> Available Services </a></b>
+        <b style = "float : right; padding : 2.2% 1.5%; font-size : 1.5em; color : white; font-family : chalkboard;"><a href = "#Vision"  style = "text-decoration : None; color : white;"> Vision </a></b>
+        <b style = "float : right; padding : 2.2% 1.5%; font-size : 1.5em; color : white; font-family : chalkboard;"><a href = "#AboutMe"  style = "text-decoration : None; color : white;"> About Me </a></b>
+        <b style = "float : right; padding : 2.2% 1.5%; font-size : 1.5em; color : white; font-family : chalkboard;"><a href = "#HomeImage"  style = "text-decoration : None; color : white;"> Home </a></b>
+    </div><br>
+
+    <div id = "HomeImage" style = "text-align : center;">
+        <div  style = "z-index : 500; border : 2px solid black; width : 100%; text-align : center; margin-top : 90px;  margin-left : auto; margin-right : auto;">
+            <div class = "top" style = "width : 100%;">
+                <img src = "{{url_for('static', filename='/Image/app-2.jpeg')}}" style = "width : 100%;" />
+            </div>
+        </div>
+    </div>
+
+    <div id = "AboutMe">
+        <br><br>
+    </div>
+
+    <div id = "AboutMee" style = "text-align : center; color : white;">
+        <div  style = "z-index : 500; width : 90%; text-align : center; margin-left : auto; margin-right : auto;">
+            <p style = "text-align : left; font-family : chalkboard; font-size : 30px;"> <b>About Me</b></p><br>
+
+            <p style = "text-align : justify; font-family : fantasy; font-size : 20px;"> &nbsp; &nbsp; &nbsp; Hello! My name is Shahzada Moon, and I’m a 21-year-old student with a deep passion for technology and data. Currently, I’m pursuing two challenging yet exciting academic paths. I am enrolled in the Bachelor of Science (B.S.) in Data Science program at IIT Madras, one of India’s premier institutions. I am currently at the Diploma level in this program, gaining foundational knowledge and skills in data analysis, machine learning, and statistics. Alongside, I am also pursuing a Bachelor of Technology (B.Tech) degree at R.D. Engineering College, Ghaziabad, where I am currently in my 2nd year. This combination of courses allows me to deepen my understanding of both theoretical and practical aspects of technology, particularly in the fields of data science and engineering.
+
+            <p style = "text-align : justify; font-family : chalkboard; font-size : 24px;"><b> Academic Journey and Interests </b>
+
+            <p style = "text-align : justify; font-family : fantasy; font-size : 20px;"> &nbsp; &nbsp; &nbsp; My academic journey has always been driven by a natural curiosity about how data can be harnessed to solve real-world problems. Data Science, being one of the most dynamic and rapidly growing fields, offers endless possibilities to innovate and impact various industries. At IIT Madras, I’m learning how to extract meaningful insights from large datasets, develop predictive models, and apply machine learning techniques to solve complex problems. This program is shaping my understanding of core subjects like statistics, programming, and machine learning algorithms.
+
+            <p style = "text-align : justify; font-family : fantasy; font-size : 20px;"> &nbsp; &nbsp; &nbsp; At the same time, pursuing a B.Tech degree at R.D. Engineering College gives me a solid foundation in computer science and engineering. This allows me to bridge the gap between theoretical learning and practical application. By combining both degrees, I hope to be well-prepared for a career that blends the power of data science with cutting-edge technology, contributing to fields such as artificial intelligence, big data analytics, and automation.
+
+            <p style = "text-align : justify; font-family : chalkboard; font-size : 24px;"><b> Skills and Achievements </b>
+
+            <p style = "text-align : justify; font-family : fantasy; font-size : 20px;"> &nbsp; &nbsp; &nbsp; I have always been keen on developing my skills outside of the classroom as well. Over the years, I’ve become proficient in programming languages such as Python, C and now learning Java, which are essential tools in both data science and engineering. I have also worked with a range of data analysis tools like Excel and SQL, and I’m actively learning more about cloud computing platforms and frameworks. My ability to solve problems, coupled with strong analytical thinking, has helped me perform well in various academic projects and competitions.
+
+            <p style = "text-align : justify; font-family : fantasy; font-size : 20px;"> &nbsp; &nbsp; &nbsp; Beyond academics, I am deeply interested in extracurricular activities that help me grow as an individual and contribute to society. Whether it’s participating in hackathons, data science competitions, or volunteering for tech-related events, I always seek opportunities to learn from others and share my knowledge.
+
+            <p style = "text-align : justify; font-family : chalkboard; font-size : 24px;"><b> Personal Life and Future Goals </b>
+
+            <p style = "text-align : justify; font-family : fantasy; font-size : 20px;"> &nbsp; &nbsp; &nbsp; I live in Ghaziabad, Uttar Pradesh, a city just outside of the national capital, Delhi. Growing up here has taught me the importance of perseverance and hard work. I believe in setting ambitious goals and pushing myself to achieve them. In the future, I aim to specialize in Artificial Intelligence or Big Data Analytics, areas I am particularly passionate about. I envision working in a tech-driven organization or a startup where I can apply my skills to build data-driven solutions that make a tangible impact on businesses and society.
+
+            <p style = "text-align : justify; font-family : fantasy; font-size : 20px;"> &nbsp; &nbsp; &nbsp; As I continue my academic journey, I am excited about the endless opportunities that lie ahead, and I’m committed to using my knowledge and skills to drive innovation in the technology sector.
+
+            <p style = "text-align : justify; font-family : fantasy; font-size : 20px;"> &nbsp; &nbsp; &nbsp; Thank you for taking the time to learn more about me.
+
+        </div>
+    </div>
+
+    <div id = "Vision">
+        <br><br><hr><br><br>
+    </div>
+
+    <div id = "Visionn" style = "text-align : center;">
+        <div  style = "z-index : 500; width : 90%; text-align : center; margin-left : auto; margin-right : auto; color : white;">
+            <p style = "text-align : left;  color : white; font-family : chalkboard; font-size : 30px;"> <b>Vision </b></p><br>
+
+            <p style = "text-align : justify; font-family : fantasy; font-size : 20px;"> &nbsp; &nbsp; &nbsp; In a fast-paced world where time is precious and convenience is key, A-Z Household Service App aspires to be the go-to platform for all your home service needs, delivering an unparalleled experience that blends quality, reliability, and ease of use. Our vision is to transform the way households manage day-to-day tasks by providing a comprehensive, on-demand service solution that covers everything from cleaning and maintenance to repair and installation. We aim to offer a seamless, user-friendly platform that empowers individuals and families to maintain their homes effortlessly, enhancing their quality of life with just a few taps on their smartphones.</p>
+
+            <p style = "text-align : justify; font-family : fantasy; font-size : 20px;"> &nbsp; &nbsp; &nbsp; At the heart of A-Z Household Service App is the idea of simplicity and accessibility. We envision a future where anyone, regardless of their technical skills or busy schedules, can access top-tier household services without the hassle of searching for multiple providers or dealing with unreliable contractors. With just one app, users will be able to book vetted, highly skilled professionals for a wide range of home services—from plumbing and electrical work to deep cleaning and pest control—at competitive prices and with a high level of transparency.</p>
+
+            <p style = "text-align : justify; font-family : fantasy; font-size : 20px;"> &nbsp; &nbsp; &nbsp; Our long-term vision is to create a holistic ecosystem of services that evolves with the needs of our users. As technology advances and new needs emerge, we will continuously innovate to integrate smart home solutions, eco-friendly services, and automation, ensuring that A-Z remains a valuable, forward-thinking tool for home management. Whether it's optimizing energy consumption, offering sustainable home improvement solutions, or automating routine household tasks, A-Z Household Service App will lead the charge in creating intelligent, connected homes.</p>
+
+            <p style = "text-align : justify; font-family : fantasy; font-size : 20px;"> &nbsp; &nbsp; &nbsp; Furthermore, we aim to empower local service professionals by providing them with a platform that helps them grow their businesses, reach new customers, and enhance their skillsets. Through training programs, fair compensation, and strong support systems, we envision A-Z as a community-driven platform that benefits both users and providers, fostering trust and cooperation at every level.</p>
+
+            <p style = "text-align : justify; font-family : fantasy; font-size : 20px;"> &nbsp; &nbsp; &nbsp; Customer satisfaction is a core pillar of our vision. We will leverage cutting-edge technology, such as AI-driven recommendations, real-time tracking, and instant customer support, to ensure every user has a smooth and positive experience. From the moment a user logs into the app to the completion of a service request, they can expect reliability, professionalism, and convenience. Our commitment to excellence extends to the safety and security of our users, with background checks, insurance, and transparent reviews ensuring peace of mind with every transaction.</p>
+
+            <p style = "text-align : justify; font-family : fantasy; font-size : 20px;"> &nbsp; &nbsp; &nbsp; Ultimately, A-Z Household Service App aims to be more than just a service provider; it strives to become an indispensable part of modern home life. Our vision is to redefine what it means to take care of your home in the digital age—making it easier, faster, and more enjoyable for people to create the living spaces they’ve always dreamed of.</p>
+
+            <p style = "text-align : justify; font-family : fantasy; font-size : 20px;"> &nbsp; &nbsp; &nbsp; By continually evolving and adapting to the needs of the modern consumer, we see A-Z Household Service App as a catalyst for change, improving how we live, work, and interact with our homes—today and in the future.</p>
+            <p style = "text-align : justify; font-family : fantasy; font-size : 20px;"> &nbsp; &nbsp; &nbsp; {{Services}} </p>
+        </div>
+    </div>
+
+    <div id = "AvailableServices">
+        <br><br><hr><br><br>
+    </div>
+
+    <div id = "AvailableServicess" align = "center" style = "text-align : center;">
+        <div  style = "z-index : 500; width : 90%; text-align : center; margin-left : auto; margin-right : auto;">
+            <p style = "text-align : left;  color : white; font-family : chalkboard; font-size : 175%;"> <b>Available Services</b></p><br>
+            <table style = "border : 2px solid black; border-collapse : collapse; margin-top : 1%; margin-left : auto; margin-right : auto; justify-align : center;">
+                <thead>
+                    <tr>
+                        <th style = "border : 3px solid black; padding : 1% 1%; background-color : #CC6600; color : white; text-align : center; font-family : chalkboard; font-size : 23px;">Service ID</th>
+                        <th style = "border : 3px solid black; padding : 1% 1%; background-color : #CC6600; color : white; text-align : center; font-family : chalkboard; font-size : 23px;">Category</th>
+                        <th style = "border : 3px solid black; padding : 1% 1%; background-color : #CC6600; color : white; text-align : center; font-family : chalkboard; font-size : 23px;">Service Name</th>
+                        <th style = "border : 3px solid black; padding : 1% 1%; background-color : #CC6600; color : white; text-align : center; font-family : chalkboard; font-size : 23px;">Base Price</th>
+                        <th style = "border : 3px solid black; padding : 1% 1%; background-color : #CC6600; color : white; text-align : center; font-family : chalkboard; font-size : 23px;">Description</th>
+                    </tr>
+                </thead>
+
+                <tbody>
+                    {% for item in items %}
+                        <tr>
+                            <td style = "border : 3px solid black; height : 40px; text-align : center; font-family : chalkboard;">{{item[0]}}</td>
+                            <td style = "border : 3px solid black; height : 40px; text-align : center; font-family : chalkboard;">{{item[1]}}</td>
+                            <td style = "border : 3px solid black; height : 40px; text-align : center; font-family : chalkboard;">{{item[2]}}</td>
+                            <td style = "border : 3px solid black; height : 40px; text-align : center; font-family : chalkboard;">{{item[3]}}</td>
+                            <td style = "border : 3px solid black; height : 40px; text-align : center; font-family : chalkboard;">{{item[4]}}</td>
+                        </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <div id = "ContactUs">
+        <br><br><hr><br><br>
+    </div>
+
+    <div id = "ContactUss" style = "text-align : center;">
+        <div  style = "z-index : 500; width : 90%; text-align : center; margin-left : auto; margin-right : auto;">
+            <p style = "text-align : left;  color : white; font-family : chalkboard; font-size : 30px;"> <b>Contact Me</b></p><br>
+            <br>
+            <p style = "text-align : left; color : white; font-family : chalkboard; font-size : 20px; margin-left : 7%;"> <b style = " color : white; font-size : 24px;">Email Id : &nbsp; </b><a href = "mailto:23f2002668@ds.study.iitm.ac.in" style = "text-decoration : None; color : white;"> 23f2002668@ds.study.iitm.ac.in </a></p>
+            <p style = "text-align : left; color : white; font-family : chalkboard; font-size : 20px; margin-left : 7%;"> <b style = " color : white; font-size : 24px;">Address : &nbsp; </b> Muradnagar, Ghaziabad, Uttar Pradesh - 201206, India</p>
+
+        </div>
+    </div><br><br><br><br>
+    <p style = "margin-left : 2%; color : white;"> Shahzada Moon | Copyright, 2024 </p><br>
+</div>
+</body>
+</html>
