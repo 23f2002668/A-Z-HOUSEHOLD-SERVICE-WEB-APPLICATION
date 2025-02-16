@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Search</title>
+</head>
+<body>
+<div id = "background" style = "width : 100%; background-image : url('/static/Image/back.jpg');"><br>
+    <form action = "{{url_for('Search')}}" method = "POST" style = "width : 95%; color : white; margin-left : auto; margin-right : auto; margin-top : 1%;">
+
+        <div = "message" style = "width : 30%; height : 50px; margin-left : 5%;">
+            {% with messages = get_flashed_messages() %}
+                {% if messages %}
+                    {% for message in messages %}
+                        <b style = "color : white; font-size : 30px;"> {{message}} </b>
+                    {% endfor %}
+                {% endif %}
+            {% endwith %}
+        </div>
+
+        <div align = "center" style = "margin-top : 3%;">
+            <b style = "font-size : 50px;"> 🔍 Search  : &nbsp;</b>
+            <input type = "text" name = "data" placeholder = "Professional Name, Professional Email, Service Name, Category, Pincode" style = "width : 75%; height : 40px; font-size : 28px; border 2 px solid black; border-radius : 10px; text-align : center;">
+        </div><br>
+
+        <div id = "main1" style = "width : 90%; margin-top : 5%; text-align : center; margin-left : auto; margin-right : auto;">
+             <div class="card" style="background-image : url('/static/Image/back3.jpg'); z-index: 500; border : 2px solid black; width: 100%; height : 95%; text-align : center; margin-left : auto; margin-right : auto;">
+                  <b style = "font-size : 35px; color : maroon; font-family : chalkboard; margin-top : 2%;"> Looking For ? </b>
+                  <div class="card-body" align = "center">
+                      <table style = "width : 95%; border : 2px solid black; border-collapse : collapse; margin-top : 1%; margin-left : auto; margin-right : auto; color : black;">
+                          <thead>
+                                  <tr>
+                                      <th style = "border : 3px solid black; width : 20%; height : 50px; font-family : chalkboard; background-color : #CC6600; text-align : center; font-size : 25px; color : white;">Sr. No.</th>
+                                      <th style = "border : 3px solid black; width : 20%; height : 50px; font-family : chalkboard; background-color : #CC6600; text-align : center; font-size : 25px; color : white;">Professional Name</th>
+                                      <th style = "border : 3px solid black; width : 20%; height : 50px; font-family : chalkboard; background-color : #CC6600; text-align : center; font-size : 25px; color : white;">Professional Email</th>
+                                      <th style = "border : 3px solid black; width : 20%; height : 50px; font-family : chalkboard; background-color : #CC6600; text-align : center; font-size : 25px; color : white;">Service Name</th>
+                                      <th style = "border : 3px solid black; width : 20%; height : 50px; font-family : chalkboard; background-color : #CC6600; text-align : center; font-size : 25px; color : white;">Category</th>
+                                      <th style = "border : 3px solid black; width : 20%; height : 50px; font-family : chalkboard; background-color : #CC6600; text-align : center; font-size : 25px; color : white;">Pincode</th>
+                                  </tr>
+                          </thead>
+
+                          <tbody>
+                              {% if items1 %}
+                                  {% for i in range(items1|length) %}
+                                      <tr>
+                                          <td style = "border : 2px solid black; height : 30px; text-align : center; font-family : chalkboard;">{{i+1}}</td>
+                                          <td style = "border : 2px solid black; height : 30px; text-align : center; font-family : chalkboard;">{{items1[i][0]}}</td>
+                                          <td style = "border : 2px solid black; height : 30px; text-align : center; font-family : chalkboard;">{{items1[i][1]}}</td>
+                                          <td style = "border : 2px solid black; height : 30px; text-align : center; font-family : chalkboard;">{{items1[i][4]}}</td>
+                                          <td style = "border : 2px solid black; height : 30px; text-align : center; font-family : chalkboard;">{{items1[i][2]}}</td>
+                                          <td style = "border : 2px solid black; height : 30px; text-align : center; font-family : chalkboard;">{{items1[i][3]}}</td>
+                                      </tr>
+                                  {% endfor %}
+                              {% else %}
+                                  <tr>
+                                      <td style = "border : 2px solid black; height : 30px; text-align : center; font-family : chalkboard;"></td>
+                                      <td style = "border : 2px solid black; height : 30px; text-align : center; font-family : chalkboard;"></td>
+                                      <td style = "border : 2px solid black; height : 30px; text-align : center; font-family : chalkboard;"></td>
+                                      <td style = "border : 2px solid black; height : 30px; text-align : center; font-family : chalkboard;"></td>
+                                      <td style = "border : 2px solid black; height : 30px; text-align : center; font-family : chalkboard;"></td>
+                                      <td style = "border : 2px solid black; height : 30px; text-align : center; font-family : chalkboard;"></td>
+                                  </tr>
+                              {% endif %}
+                          </tbody>
+                      </table><br><br>
+                  </div>
+             </div><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+        </div>
+    </form><br>
+</div>
+</body>
+</html>

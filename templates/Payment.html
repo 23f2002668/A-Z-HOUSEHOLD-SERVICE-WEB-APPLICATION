@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+    <style>
+
+        .background{                            /* For 'class', use '.class_name' syntax. */
+            display : flex;
+            min-width : 100vh;
+            min-height : 100vh;
+            background-image : linear-gradient(to right bottom, white, #FFCC99, #FFCC66);
+        }
+
+        #main{                                  /* For 'id', use '.id_name' syntax. */
+            display : block;
+            width : 700px;
+            height : 600px;
+            margin-left : auto;
+            margin-right : auto;
+            margin-top : auto;
+            margin-bottom : auto;
+            background-color : white;
+        }
+
+        .row{
+            display : flex;
+            flex-direction : row;
+            flex-wrap: wrap;
+            justify-content : center;
+        }
+
+        .col{
+            width : 46%;
+            height : 500px;
+            padding: 10px;
+            margin: 5px 0px 5px 0px;
+            font-size : 18px;
+        }
+
+        h4{
+            font-size : 20px;
+            margin-top : 2%;
+        }
+
+        input{
+            width : 98%;
+            height : 30px;
+            margin-top : 1%;
+            margin-bottom : 5%;
+            font-size : 16px;
+        }
+
+    </style>
+</head>
+<body>
+
+
+<div class = "background">
+    <div id = "main">
+        <form action = "{{url_for('Payment', Email=Email, Customer=Customer, ServiceName=ServiceName, ProfessionalName=ProfessionalName, ProfessionalEmail=ProfessionalEmail, BasePrice=BasePrice, Category=Category)}}" method = "POST">
+            <div class = "row">
+                <div class = "col">
+                    <h4> Billing Address </h4>
+                    <label>Full Name</label>
+                    <input type = "text" name = "Name" required = "required">
+                    <label>Email ID</label>
+                    <input type = "email" name = "Email" required = "required">
+                    <label>Address</label>
+                    <input type = "text" name = "Address" required = "required">
+                    <label>City</label>
+                    <input type = "text" name = "City" required = "required">
+                    <label>State</label>
+                    <input type = "text" name = "State" required = "required">
+                    <label>Postal / Zip Code</label>
+                    <input type = "text" minlength="6" maxlength="6" name = "Pincode" required = "required" style = "margin-top : 0px; margin-bottom : 0px;">
+                </div>
+
+                <div class = "col">
+                    <h4> Payment </h4>
+                    <label>Accepted Cards</label>
+                    <img src = "/static/Image/payment.png" style = "width : 300px; height : 50px;">
+                    <label>Card Holder Name</label>
+                    <input type = "text" name = "CardHolderName" required = "required">
+                    <label>Credit Card Number</label>
+                    <input type = "number" name = "CreditCardNumber" required = "required">
+                    <label>Expiry Month</label>
+                    <select id = "month" name = "Month" required = "required" style = "width : 100%; height : 36px; margin-top : 1%; margin-bottom : 5%; font-size : 16px;">
+                        <option value = "January">January</option>
+                        <option value = "February">February</option>
+                        <option value = "March">March</option>
+                        <option value = "April">April</option>
+                        <option value = "May">May</option>
+                        <option value = "June">June</option>
+                        <option value = "July">July</option>
+                        <option value = "August">August</option>
+                        <option value = "September">September</option>
+                        <option value = "October">October</option>
+                        <option value = "November">November</option>
+                        <option value = "December">December</option>
+                    </select>
+                    <label>Expiry Year</label>
+                    <input type = "number" min = "2024" name = "ExpiryYear" required = "required" style = "width : 98%; height : 30px; margin-top : 1%; margin-bottom : 3.9%;">
+                    <label>CVV</label>
+                    <input type = "number" min = "0" name = "Cvv" required = "required">
+                </div>
+            </div>
+            <button type = "submit" style = "width : 95%; height : 50px; background-color : orange; margin-left : 2.5%; color : white; font-size : 22px; border : 2px #009933;">Proceed To Checkout</button>
+        </form>
+    </div>
+</div>
+
+
+
+</body>
+</html>

@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cars Gallery</title>
+    <style>
+        /* General Reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f5f5f5;
+            color: #333;
+        }
+
+        /* Header styling */
+        header {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 20px 0;
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            margin: 0;
+        }
+
+        /* Gallery Container */
+        .gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            gap: 20px;
+            padding: 20px;
+            justify-items: center;
+        }
+
+        /* Individual Car Item */
+        .car {
+            background-color: white;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            transition: transform 0.3s ease-in-out;
+        }
+
+        .car:hover {
+            transform: translateY(-10px);
+        }
+
+        /* Image Styling */
+        .car img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        /* Car Text */
+        .car p {
+            padding: 10px;
+            font-size: 1.1rem;
+            font-weight: bold;
+            background-color: #333;
+            color: white;
+            margin-top: 0;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Car Gallery</h1>
+    </header>
+
+    <section class="gallery">
+        <div class="car">
+            <img src="car1.jpg" alt="Car 1">
+            <p>Car Model 1</p>
+        </div>
+        <div class="car">
+            <img src="car2.jpg" alt="Car 2">
+            <p>Car Model 2</p>
+        </div>
+        <div class="car">
+            <img src="car3.jpg" alt="Car 3">
+            <p>Car Model 3</p>
+        </div>
+        <div class="car">
+            <img src="car4.jpg" alt="Car 4">
+            <p>Car Model 4</p>
+        </div>
+    </section>
+</body>
+</html>

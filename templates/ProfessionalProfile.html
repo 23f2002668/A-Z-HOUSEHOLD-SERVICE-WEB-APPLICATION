@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Professional Profile</title>
+
+    <style>
+
+        .background {
+            background-image : url('/static/Image/back.jpg');
+            width : 100%;
+        }
+
+
+    </style>
+</head>
+<body>
+
+<div class = "background"><br>
+    <form action = "{{url_for('ProfessionalProfile')}}" method = "POST" align = "center"> <br>
+        <div class = "main" align = "center" style = "border : 1px solid black; background-color : white; width : 60%; height : 850px; margin-left : auto; margin-right : auto; margin-top : 1%; border : 1px  solid back; border-radius : 10px;">
+            <div id = "back" align = "left" style = "margin-left : 3.5%;">
+                <div id = "header">
+                <h1 style = " font-size : 35px; font-family : chalkboard; margin-top : 3%; color : maroon; text-align : center;"> Professional Profile </h1>
+                </div>
+
+                {% with messages = get_flashed_messages() %}
+                    {% if messages %}
+                        {% for message in messages %}
+                            <p style = "color : green; font-size : 18px; "> {{message}} </br>
+                        {% endfor %}
+                    {% endif %}
+                {% endwith %}
+
+                <p style = "font-size : 20px;"> User Name </label>
+                <input type = "text" name = "UserName" value = "{{r[1]}}" autofocus = "autofocus" placeholder = "Your Full Name" required = "required" style = "background-color : #DCDCDC ; width : 95%; margin-top : 1%; margin-bottom : 0.5%;  height : 30px; border : 1px solid black; border-radius : 5px;  font-size : 18px;"/>
+
+                <p style = "font-size : 20px;"> Email ID </label>
+                <input type = "email" name = "Email" placeholder = "{{r[0]}} (Email Id cannot be changed.)" maxlength="0" style = "background-color : #DCDCDC ; width : 95%; margin-top : 1%; margin-bottom : 0.5%;  height : 30px; border : 1px solid black; border-radius : 5px;  font-size : 18px;"/>
+
+                <p style = "font-size : 20px;"> Date Of Birth </label>
+                <input type = "date" name = "Dob" value = "{{r[2]}}" required = "required" style = "background-color : #DCDCDC ; width : 95%; margin-top : 1%; margin-bottom : 0.5%; height : 30px; border : 1px solid black; border-radius : 5px;  font-size : 18px;"/>
+
+                <select name = "Category" style = "background-color : #DCDCDC ; width : 95%; margin-top : 6%; margin-bottom : 0.5%; height : 35px; border : 1px solid black; border-radius : 5px;  font-size : 18px;">
+                    <option> Select Available Service Category</option>
+                    <option value = "A.C. Mounting Services"> A.C. Mounting Services </option>
+                    <option value = "Beauty & Grooming"> Beauty & Grooming </option>
+                    <option value = "Cleaning"> Cleaning </option>
+                    <option value = "Construction & Maintenance Services"> Construction & Maintenance Services </option>
+                    <option value = "Electrical Services"> Electrical Services </option>
+                    <option value = "Furniture & Carpentry Services"> Furniture & Carpentry Services </option>
+                    <option value = "Handyman Services"> Handyman Services </option>
+                    <option value = "Packing & Moving Services"> Packing & Moving Services </option>
+                    <option value = "Plumbing Services"> Plumbing Services </option>
+                    <option value = "Tiles & Marble Services"> Tiles & Marble Services </option>
+                    <option value = "TV Mounting And Service"> TV Mounting And Service </option>
+                    <option value = "White Wash Services"> White Wash Services </option>
+                </select>
+
+                <p style = "font-size : 20px;"> Experience </label>
+                <input type = "number" step = "any" name = "Experience" value = "{{r[4]}}" maxlength="0" style = "background-color : #DCDCDC ; width : 95%; margin-top : 1%; margin-bottom : 0.5%;  height : 30px; border : 1px solid black; border-radius : 5px;  font-size : 18px;"/>
+
+                <p style = "font-size : 20px;"> Address </label>
+                <input type = "text" rows = "1" cols = "150" name = "Address" value = "{{r[5]}}" required = "required" style = "background-color : #DCDCDC ; width : 95%;  height : 30px; margin-top : 1%; margin-bottom : 0.5%;  border : 1px  solid black; border-radius : 5px;  font-size : 18px;">
+
+                <p style = "font-size : 20px;"> Pin Code </label>
+                <input type = "pin"  length = "6" name = "Pincode" value = "{{r[6]}}" placeholder = "Your Pincode" required = "required" style = "background-color : #DCDCDC ; width : 95%; margin-top : 1%; margin-bottom : 0.5%;  height : 30px; border : 1px solid black; border-radius : 5px;  font-size : 18px;"/>
+
+                <div class = "buttons" align = "center" >
+                    <button type = "submit" style = "margin-top : 3%; height : 30px; width : 30%; border : 1px ; border-radius : 5px;  font-size : 20px; background-color : #FFA500; color : white;"> Update </button> &nbsp; &nbsp; OR &nbsp; &nbsp;
+                    <button type = "reset" style = "margin-top : 3%; height : 30px; width : 30%; border : 1px ; border-radius : 5px;  font-size : 20px; background-color : red; color : white;"> Reset </button>
+                </div>
+            </div><br><br><br>
+        </div><br><br>
+        <p align = "left" style = "margin-left : 3%; color : white;"> Shahzada Moon | Copyright, 2024 </p><br>
+    </form>
+</div>
+
+</body>
+</html>

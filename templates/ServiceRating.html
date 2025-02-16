@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Service Rating</title>
+
+    <style>
+
+      #star1, #star2, #star3, #star4, #star5{
+          width: 40px;
+          height : 40px;
+          cursor: pointer;
+      }
+
+      .star01, .star02, .star03, .star04, .star05{
+          display : None;
+      }
+
+      /* When the checkbox is checked, change the image */
+
+      .star01:checked + label #star1 {
+          content: url('/static/Image/1-Star.png');
+      }
+
+      .star02:checked + label #star2 {
+          content: url('/static/Image/1-Star.png');
+      }
+
+      .star03:checked + label #star3 {
+          content: url('/static/Image/1-Star.png');
+      }
+
+      .star04:checked + label #star4 {
+          content: url('/static/Image/1-Star.png');
+      }
+
+      .star05:checked + label #star5 {
+          content: url('/static/Image/1-Star.png');
+      }
+
+    </style>
+</head>
+<body>
+
+<div class = "back" align = "center" style = "width : 100%; background-image : url('/static/Image/back.jpg')"><br>
+  <div>
+    <form action = "{{url_for('ServiceRating', ProfessionalEmail=ProfessionalEmail, CustomerEmail=CustomerEmail, Service=Service, Date=Date)}}", method = "POST" style = "width : 50%; height : 700px; margin-top : 3%; margin-left : auto; margin-right : auto; border : 2px solid black; border-radius : 7px; background-color : white;">
+        <div class = "main1" align = "center">
+          <div id = "head" style = "color : maroon; font-size : 30px; font-family : fantasy;">
+            <button style = "background-color : olive; color : white; width : 100%; height : 80px; border : 2px solid black; border-radius : 5px; font-size : 100%; margin-top : 0%;"><b>Service Remarks</b></button>
+            <button style = "background-color : orange; width : 90%; height : 50px; border : 2px solid black; border-radius : 7px; font-size : 75%; margin-top : 5%;"><b>Request ID : {{RequestId}}</b></button>
+          </div>
+          <br><br>
+
+          <div id = "main2" align = "center">
+            <button style = "background-color : orange; width : 25%; height : 50px; border : 2px solid black; border-radius : 7px;">{{Service}}</button>
+            <button style = "background-color : orange; width : 25%; height : 50px; border : 2px solid black; border-radius : 7px; margin-left : 7%; margin-right : 7%;">{{items[1]}}</button>
+            <button style = "background-color : orange; width : 25%; height : 50px; border : 2px solid black; border-radius : 7px;">{{items[2]}}</button><br><br><br><br>
+          </div>
+
+          <div id = "main" align = "center">
+            <button style = "background-color : orange; width : 25%; height : 50px; border : 2px solid black; border-radius : 7px;">{{items[3]}}</button>
+            <button style = "background-color : orange; width : 25%; height : 50px; border : 2px solid black; border-radius : 7px; margin-left : 7%; margin-right : 7%;">{{ProfessionalEmail}}</button>
+            <button style = "background-color : orange; width : 25%; height : 50px; border : 2px solid black; border-radius : 7px;">{{Date}}</button>
+          </div>
+            <br><br>
+
+          <div id = "main3" align = "center" style = "margin-top : 3%;">
+            <label style = "font-size : 20px; color : maroon;">Service Rating : &nbsp; </label>
+
+            <input type = "checkbox" name = "star01"  value = "1" id = "star01" class = "star01" />
+            <label for = "star01">
+              <img id = "star1" src = "{{url_for('static', filename =  '/Image/0-Star.png')}}">
+            </label>
+
+            <input type = "checkbox" name = "star02"  value = "2" id = "star02" class = "star02"/>
+            <label for = "star02">
+              <img id = "star2" src = "{{url_for('static', filename =  '/Image/0-Star.png')}}">
+            </label>
+
+            <input type = "checkbox" name = "star03"  value = "3" id = "star03" class = "star03" />
+            <label for = "star03">
+              <img id = "star3" src = "{{url_for('static', filename =  '/Image/0-Star.png')}}">
+            </label>
+
+            <input type = "checkbox" name = "star04" value = "4" id = "star04" class = "star04" />
+            <label for = "star04">
+              <img id = "star4" src = "{{url_for('static', filename =  '/Image/0-Star.png')}}">
+            </label>
+
+            <input type = "hidden" name = "star05" value = "0">
+            <input type = "checkbox" name = "star05" value = "5" id = "star05" class = "star05" />
+            <label for = "star05">
+              <img id = "star5" src = "{{url_for('static', filename =  '/Image/0-Star.png')}}">
+            </label><br>
+
+            <textarea rows = "4" cols = "40" name = "description" placeholder = "Remark (If any)" maxlength = "1000" required = "required" style = "border : 2px solid black; margin-top : 5%; border-radius : 7px; font-size : 14px; color : maroon;"></textarea>
+          </div>
+
+          <div id = "buttons" style = "margin-top : 7%;">
+            <button type = "submit" style = "background-color : #F62817; color : white; width : 30%; height : 40px; border : 2px solid black; border-radius : 7px; margin-right : 5%; font-size : 25px;">Submit</button>
+            <button type = "reset" style = "background-color : #F62817; color : white; width : 30%; height : 40px; border : 2px solid black; border-radius : 7px; margin-left : 5%; font-size : 25px;">Reset</button>
+          </div>
+        </div>
+      </form><br><br>
+    <p align = "left" style = "margin-left : 2%; color : white;"> Shahzada Moon | Copyright, 2024 </p><br>
+    </div>
+</div>
+
+</body>
+</html>
