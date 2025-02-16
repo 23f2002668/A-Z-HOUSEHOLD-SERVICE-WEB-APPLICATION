@@ -54,7 +54,7 @@ code etc.
 ---
 
 # Challenges Faced:-
-•* Designing role-based access to functionalities.
+* Designing role-based access to functionalities.
 * Implementing effective database relationships for seamless operations.
 
 ---
