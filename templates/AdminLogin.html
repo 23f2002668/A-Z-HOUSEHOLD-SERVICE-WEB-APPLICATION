@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Admin Login</title>
+</head>
+<body>
+
+<div id = "background" style = "background-image : linear-gradient(to right bottom, white, #FFCC99, #FFCC66); width : 100%;">
+
+    <form action = "{{url_for('Login')}}" method = "POST" style = "height : 100vh;"><br>
+
+        <fieldset align = "center" style = " background-color : white; width : 800px; margin-left : auto; margin-right : auto; margin-top : 15%;">
+            <legend> <h1 style = "text-align : center; margin-top: 1%; color : maroon; font-family : Apple Chancery;"> A - Z Household Services </h1> </legend>
+            <b style = "font-size : 20px; color : red;"> {{Comment}} </b><br>
+            <label id = "email" style = "font-size : 22px; text-align : center;"> Registered Email ID &nbsp; &nbsp; : &nbsp; &nbsp; </label>
+            <input type = "email"  name = "Email" placeholder = "Your Registered Email ID" autofocus = "autofocus" required = "required" style = "background-color : #DCDCDC; height : 30px; width : 500px; border : 1% solid black; border-radius : 5px; text-align : center; font-size : 18px;"/> <br><br>
+            <label id = "password" style = "font-size : 22px;"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Password &nbsp; &nbsp; : &nbsp; &nbsp; </label>
+            <input type = "password"  name = "Password" placeholder = "Your Password" required = "required" style = "background-color : #DCDCDC; height : 30px; width : 500px; border : 1% solid black; border-radius : 5px; text-align : center; font-size : 18px;"/> <br><br><br><br>
+
+            <div class = "main">
+                <button type = "submit" name = "login" style = "border : 2px solid #000099; border-radius : 5px; height : 30px; width : 250px; background-color : #99CCFF; font-size : 20px;"> Login </button>
+                <button style = "background-color : #99CCFF; border : 2px solid #000099; border-radius : 5px; height : 30px; width : 250px;"><a href = "/professional-signup" style = "color : black; text-decoration : None; font-size : 20px;"> Register As Professional </a></button>
+                <button style = "background-color : #99CCFF; border : 2px solid #000099; border-radius : 5px; height : 30px; width : 250px;"> <a href = "/customer-signup" style = "color : black; text-decoration : None; font-size : 20px;"> Create Account </a></button>
+            </div>
+        </fieldset>
+
+    </form>
+</div>
+
+</body>
+</html>

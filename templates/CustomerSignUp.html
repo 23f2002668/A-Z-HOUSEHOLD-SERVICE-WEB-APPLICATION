@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Customer Signup</title>
+</head>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Customer Signup</title>
+
+    <style>
+
+        .background {
+            background-image : url('/static/Image/back1.jpeg');
+            width : 100%;
+            height : 800px;
+        }
+
+        .form_data, .service {
+            float : right;
+            margin-right : 5%;
+            margin-top : 3%;
+        }
+
+        .input {
+            float : right;
+        }
+
+
+    </style>
+</head>
+<body>
+
+<div class = "background"><br>
+    <form action = "{{url_for('CustomerSignup')}}" method = "POST" align = "center"> <br>
+        <div class = "main" align = "center" style = "border : 1px solid black; background-color : white; width : 800px; height : 725px; margin-left : auto; margin-right : auto;">
+
+            <div id = "header">
+                <h1 style = "text-align : center; font-size : 35px; font-family : Apple Chancery; margin-top : 0.2%;"> <i> Customer Signup </i></h1>
+            </div>
+
+            <p><b style = "color : red;"> {{Warning}} </b> {{Comment}}</p>
+            <b style = "color : green;"> {{comment}} </b>
+
+            <div class = "form_data">
+                <label id = "name" style = "font-size : 20px;"> Full Name &nbsp;  &nbsp; : </label> &nbsp;  &nbsp;
+                <input type = "text" name = "UserName" autofocus = "autofocus" placeholder = "Your Full Name" required = "required" style = "background-color : #DCDCDC  ; height : 30px; width : 500px; border : 1% solid black; border-radius : 5px; text-align : center; font-size : 18px;"/>
+            </div>
+            <div class = "form_data">
+                <label id = "email" style = "font-size : 20px;"> Email ID &nbsp;  &nbsp; : </label> &nbsp;  &nbsp;
+                <input type = "email" name = "Email" placeholder = "Your Email ID" required = "required" style = "background-color : #DCDCDC  ; height : 30px; width : 500px; border : 1% solid black; border-radius : 5px; text-align : center; font-size : 18px;"/>
+            </div>
+            <div class = "form_data">
+                <label id = "dob" style = "font-size : 20px;"> Date Of Birth &nbsp;  &nbsp; : </label> &nbsp;  &nbsp;
+                <input type = "date" value = "2024" name = "Dob" required = "required" style = "background-color : #DCDCDC  ; height : 30px; width : 503px; border : 1% solid black; border-radius : 5px; text-align : center; font-size : 18px;"/>
+            </div>
+
+            <div class = "form_data">
+                <label id = "address" style = "font-size : 20px;"> Address &nbsp;  &nbsp; : </label> &nbsp;  &nbsp;
+                <textarea rows = "5" cols = "44" name = "Address" placeholder = "Enter your address here ......." required = "required" style = "background-color : #DCDCDC  ; border : 2px solid black; border-radius : 10px; text-align : center; font-size : 18px;"></textarea>
+            </div>
+            <div class = "form_data">
+                <label id = "PinCode" style = "font-size : 20px;"> Pin Code &nbsp;  &nbsp; : </label> &nbsp;  &nbsp;
+                <input type = "pin"  length = "6" name = "Pincode" placeholder = "Your Pincode" required = "required" style = "background-color : #DCDCDC  ; height : 30px; width : 500px; border : 1% solid black; border-radius : 5px; text-align : center; font-size : 18px;"/>
+            </div>
+            <div class = "form_data">
+                <label id = "password" style = "font-size : 20px;"> Password &nbsp;  &nbsp; : </label> &nbsp;  &nbsp;
+                <input type = "password"  minlength = "8" name = "Password" placeholder = "Your Password" required = "required" style = "background-color : #DCDCDC  ; height : 30px; width : 500px; border : 1% solid black; border-radius : 5px; text-align : center; font-size : 18px;"/>
+            </div>
+            <div class = "form_data">
+                <label id = "verify_password" style = "font-size : 20px;"> Verify Password &nbsp;  &nbsp; : </label> &nbsp;  &nbsp;
+                <input type = "password"  minlength = "8" name = "VerifyPassword" placeholder = "Verify Your Password" required = "required" style = "background-color : #DCDCDC  ; height : 30px; width : 500px; border : 1% solid black; border-radius : 5px; text-align : center; font-size : 18px;"/>
+            </div>
+
+            <div class = "buttons">
+                <button type = "submit" style = "margin-top : 8%; height : 30px; width : 325px; border : 2px; border-radius : 5px; text-align : center; font-size : 20px; background-color : #FFA500;"> Register </button> &nbsp; &nbsp; OR &nbsp; &nbsp;
+                <button type = "reset" style = "background-color : #FFA500 ; border : 2px ; border-radius : 5px; height : 30px; width : 325px;"> <a href = "/login" style = "color : black; text-decoration : None; font-size : 20px;"> Login Here </a></button>
+            </div>
+
+        </div>
+    </form>
+</div>
+
+</body>
+</html>
