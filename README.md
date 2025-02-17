@@ -1,7 +1,7 @@
 # **A-Z-HOUSEHOLD-SERVICE-WEB-APPLICATION**
 
 
-# Overview / Vision :-
+# Overview / Vision 
 In a fast-paced world where time is precious and convenience is key, A-Z Household Service App
 aspires to be the go-to platform for all your home service needs, delivering an unparalleled experience
 that blends quality, reliability, and ease of use. A-Z Household Service App is the idea of simplicity and
@@ -13,7 +13,7 @@ competitive prices and with a high level of transparency.
 
 ---
 
-# Functionality Of A-Z Household Application :-
+# Functionality Of A-Z Household Application
 
 **1. Admin login and user login**
 
@@ -53,20 +53,20 @@ code etc.
 
 ---
 
-# Challenges Faced:-
+# Challenges Faced
 * Designing role-based access to functionalities.
 * Implementing effective database relationships for seamless operations.
 
 ---
 
-# Frameworks and Libraries :-
+# Frameworks and Libraries
 * Flask for application code
 * Jinja2 templates + Bootstrap for HTML generation and styling
 * SQLite for data storage
 
 ---
 
-# Database Structure:-
+# Database Structure
 
 **Payments :**
 * CustomerName
